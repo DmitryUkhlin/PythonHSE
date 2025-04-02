@@ -6,15 +6,15 @@ value = 0
 
 # TODO Посчитайте количество  месяцев, которое можно протянуть без долгов
 
-for value in range(1, 13):
-    if value == 1:
+for value in range(0, 13):
+    if value == 0:
         money_capital += salary - spend
     else:
         spend += spend * increase
         money_capital += salary - spend
 
     if money_capital < 0:
-        print("Количество месяцев, которое можно протянуть без долгов:", value - 1)
+        print("Количество месяцев, которое можно протянуть без долгов:", value )
         break
 
 
