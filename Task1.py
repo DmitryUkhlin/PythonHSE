@@ -8,12 +8,14 @@ value = 0
 
 for value in range(1, 13):
     if value == 1:
-        money_capital = money_capital+salary-spend
+        money_capital += salary - spend
     else:
-        spend += spend*increase
-        money_capital = money_capital+salary-spend
-    if money_capital >= 0:
-        print(f"Месяц:{value}\nТекущие траты:{spend:.2f}\nТекущий бюджет на месяц:{money_capital:.2f}" )
+        spend += spend * increase
+        money_capital += salary - spend
+
+    if money_capital < 0:
+        print("Количество месяцев, которое можно протянуть без долгов:", value - 1)
+        break
 
 
 
